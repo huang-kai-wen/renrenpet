@@ -7,7 +7,25 @@
 <script>
 
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    show () {
+      let scre = document.body.clientWidth
+      console.log('score', scre)
+      if (scre <= 960) {
+        this.$router.push({
+          name: 'mobile'
+        })
+      } else {
+        this.$router.push({
+          name: 'computer'
+        })
+      }
+    }
+  },
+  created () {
+    this.show()
+  }
 }
 </script>
 

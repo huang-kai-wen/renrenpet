@@ -50,7 +50,7 @@ module.exports = {
   lintOnSave: true,
   chainWebpack: config => {
     config.resolve.alias
-      .set('@', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))
+      .set('@src', resolve('src')) // key,value自行定义，比如.set('@@', resolve('src/components'))
       .set('_com', resolve('src/components'))
       .set('_api', resolve('src/api'))
       .set('_img', resolve('src/assets/img'))
